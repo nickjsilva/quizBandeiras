@@ -5,64 +5,92 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
     tools:context=".RankingActivity">
 
     <TextView
         android:id="@+id/textViewTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="RANKING"
+        android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewMissionPassed"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mission_passed"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
 
     <TextView
         android:id="@+id/textViewNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="Nome: "
-        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="64dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewMissionPassed" />
 
     <TextView
         android:id="@+id/textViewPontuacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/press_start_2p"
         android:text="Pontuação: "
-        app:layout_constraintTop_toBottomOf="@id/textViewNome"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNome" />
 
     <Button
         android:id="@+id/btnResponderNovamente"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="RESPONDER NOVAMENTE"
-        app:layout_constraintTop_toBottomOf="@id/textViewPontuacao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="180dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="64dp" />
+        android:backgroundTint="#9D0000"
+        android:fontFamily="@font/press_start_2p"
+        android:text="RESPONDER NOVAMENTE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewPontuacao" />
 
     <Button
         android:id="@+id/btnTelaInicial"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TELA INICIAL"
-        app:layout_constraintTop_toBottomOf="@id/btnResponderNovamente"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="24dp" />
+        android:backgroundTint="#9D0000"
+        android:fontFamily="@font/press_start_2p"
+        android:text="TELA INICIAL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnResponderNovamente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
