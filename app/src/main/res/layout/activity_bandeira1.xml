@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btnIniciar2"
+            android:id="@+id/btnResponder"
             android:layout_width="386dp"
             android:layout_height="59dp"
             android:backgroundTint="@color/black"
@@ -67,7 +67,7 @@
             app:layout_constraintVertical_bias="0.775">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/alternativa1"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:fontFamily="@font/press_start_2p"
@@ -75,7 +75,7 @@
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/alternativa2"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:fontFamily="@font/press_start_2p"
@@ -83,7 +83,7 @@
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/alternativa3"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:fontFamily="@font/press_start_2p"
@@ -91,7 +91,7 @@
                 android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/alternativa4"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:fontFamily="@font/press_start_2p"
@@ -110,7 +110,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.186"
-            app:srcCompat="@drawable/img_1" />
+            app:srcCompat="@drawable/bandeira_iemen" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
