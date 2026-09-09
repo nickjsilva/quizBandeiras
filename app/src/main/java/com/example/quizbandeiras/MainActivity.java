@@ -5,6 +5,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +15,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-Button btnIniciar;
+
+    Button btnIniciar;
+    EditText txtNome;
     private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,19 +30,29 @@ Button btnIniciar;
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        btnIniciar = findViewById(R.id.btnIniciar);
 
-        // 2. Configura o clique (AGORA DENTRO DO ONCREATE)
+        btnIniciar = findViewById(R.id.btnIniciar);
+        txtNome = findViewById(R.id.txtNome);
+
+        // Configura o clique
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Cria a Intent para abrir a activity 'rateio'
+                String nome = txtNome.getText().toString().trim();
+
+                if (nome.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Digite seu nome!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Cria a Intent para abrir a activity do quiz, enviando o nome
                 Intent intent = new Intent(MainActivity.this, Bandeira1.class);
+                intent.putExtra(Bandeira1.EXTRA_NOME_USUARIO, nome);
                 startActivity(intent);
             }
         });
 
-        // Inicializa a música na tela Bandeira1
+        // Inicializa a música na tela principal
         mediaPlayer = MediaPlayer.create(this, R.raw.faint);
         if (mediaPlayer != null) {
             mediaPlayer.setLooping(true);
@@ -70,5 +85,4 @@ Button btnIniciar;
             mediaPlayer = null;
         }
     }
-
 }

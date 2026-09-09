@@ -20,6 +20,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+
+
 public class Bandeira1 extends AppCompatActivity {
 
     public static final String EXTRA_NOME_USUARIO = "extra_nome_usuario";
@@ -58,7 +61,7 @@ public class Bandeira1 extends AppCompatActivity {
 
         // Vincula as views
         imageView = findViewById(R.id.imageView);
-        textViewEnunciado = findViewById(R.id.textView2);
+        textViewEnunciado = findViewById(R.id.textViewEnunciado);
         radioGroup = findViewById(R.id.radioGroup);
         alternativa1 = findViewById(R.id.alternativa1);
         alternativa2 = findViewById(R.id.alternativa2);
