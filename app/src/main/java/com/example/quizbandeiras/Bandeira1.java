@@ -95,7 +95,7 @@ public class Bandeira1 extends AppCompatActivity {
         perguntas.add(new Pergunta(
                 R.drawable.bandeira_mongolia,
                 "Que país é este?",
-                Arrays.asList("Rússia", "Cazaquistão", "Mongólia", "China"),
+                Arrays.asList("Nepal", "Cazaquistão", "Mongólia", "Bangladesh"),
                 2
         ));
 
@@ -116,7 +116,7 @@ public class Bandeira1 extends AppCompatActivity {
         perguntas.add(new Pergunta(
                 R.drawable.bandeira_sri_lanka,
                 "Que país é este?",
-                Arrays.asList("Butão", "Índia", "Sri Lanka", "Nepal"),
+                Arrays.asList("Butão", "Zâmbia", "Sri Lanka", "Nepal"),
                 2
         ));
 
@@ -224,9 +224,6 @@ public class Bandeira1 extends AppCompatActivity {
 
         if (indiceSelecionado == pergunta.getIndiceCorreto()) {
             pontuacao++;
-            Toast.makeText(this, "Correto! ✅", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Errado! ❌", Toast.LENGTH_SHORT).show();
         }
 
         perguntaAtual++;
@@ -237,7 +234,6 @@ public class Bandeira1 extends AppCompatActivity {
             finalizarQuiz();
         }
     }
-
     private void finalizarQuiz() {
         pararMusica();
 
