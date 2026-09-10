@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnIniciar;
+    Button btnIniciar, btnSair;
     EditText txtNome;
     private MediaPlayer mediaPlayer;
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        btnSair = findViewById(R.id.btnSair);
         btnIniciar = findViewById(R.id.btnIniciar);
         txtNome = findViewById(R.id.txtNome);
 
@@ -52,8 +52,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAffinity();
+                // Encerra o processo do app (opcional, mas garante o fechamento completo)
+                System.exit(0);
+            }
+        });
+
         // Inicializa a música na tela principal
-        mediaPlayer = MediaPlayer.create(this, R.raw.faint);
+        mediaPlayer = MediaPlayer.create(this, R.raw.missaoimpossivel);
         if (mediaPlayer != null) {
             mediaPlayer.setLooping(true);
             mediaPlayer.start();
